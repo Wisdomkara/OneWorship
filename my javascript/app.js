@@ -1817,31 +1817,12 @@ function successFunction() {
 }
 newquote5.addEventListener('click', successFunction);
 
-//  wisdom quotes
 
-function fetchQuote() {
-  console.log('it is working');
-  fetch('https://api.quotable.io/random')
-    .then((response) => response.json())
-    .then((data) => {
-      // Update the quote and author elements with the fetched data
-      const quoteElement = document.querySelector('.quote6');
-      const authorElement = document.querySelector('.author6');
+   
 
-      // Update the HTML content with the fetched quote and author
-      quoteElement.innerHTML = `"${data.content}"`;
-      authorElement.innerHTML = data.author;
-    })
-    .catch((error) => console.error('Error fetching quote:', error));
-}
 
-// Initial call to fetch a quote when the page loads
-fetchQuote();
 
-// Add event listener to the button to fetch a new quote when clicked
-document.querySelector('.newquote6').addEventListener('click', function () {
-  fetchQuote;
-});
+
 
 // for video hero speed
 window.addEventListener('load', function () {

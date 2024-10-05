@@ -91,25 +91,25 @@ a li:hover {
   padding: 10px;
   box-shadow: 0px 0px rgb(255, 255, 255), 0px 0px 10px rgb(65, 65, 65);
   max-width: 600rem;
-  z-index: 99999999999999999m;
+  z-index: 99999999999999999;
 }
 /* for log in and log out */
-.sign-up a{
+.sign-up a {
   text-decoration: none;
   color: white;
   font-family: sans-serif;
   background-color: #0057b300;
 }
-.login a{
+.login a {
   text-decoration: none;
   color: white;
   font-family: sans-serif;
 }
-.account, .sign-up, .login{
+.account,
+.sign-up,
+.login {
   background-color: rgba(255, 0, 0, 0);
 }
-
-
 
 /* for social icon styling */
 .social a {
@@ -156,6 +156,7 @@ a li:hover {
   transition: all 0.3s ease-in;
   border-radius: 0px 80px 0px 50px;
 }
+
 /* main content */
 main {
   height: 90vh;
@@ -169,7 +170,7 @@ main {
   padding: 30px;
   position: absolute;
   max-width: 300px;
-  box-shadow: 0px 0px 10px grey, 0px 0px 10px;
+  filter: drop-shadow(0px 10px 20px rgba(255, 166, 0, 0.45));
   border-radius: 10px;
   margin: 0px auto;
 
@@ -450,119 +451,33 @@ section .intro h1 {
 
 /* media queries */
 
-@media (max-width: 768px) {
-  .navlist {
-    display: none;
-  }
-  .social {
-    display: none;
-  }
+/* for smaller i phone screen and andriod header dropdown button */
+
+@media only screen and (max-width: 600px) {
   .toggle_btn {
     display: block;
   }
-  .list {
-    flex-direction: column;
-    align-items: center;
-  }
-  .list li {
-    margin: 10px 0;
-  }
-  .dropdown_menu a {
-    color: rgb(15, 14, 14);
-    text-decoration: none;
-  }
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-}
-
-/* for smaller i phone screen and andriod header dropdown button */
-
-@media (max-width: 600px) {
-  .toggle_btn {
-    z-index: 9999999999999999;
-  }
-}
-
-@media (max-width: 434px) {
-  .container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    max-width: 15rem;
-    max-height: fit-content;
-    margin-top: 5rem;
-  }
-  .container1 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    max-width: 15rem;
-    max-height: fit-content;
-    margin-top: 5rem;
-  }
-  .container2 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    max-width: 15rem;
-    max-height: fit-content;
-    margin-top: 5rem;
-  }
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
-  .heading,
-  h4,
+  .list,
+  li,
   a {
-    font-size: 10px;
+    display: none;
   }
-  .heading,
-  h1 {
+  .head {
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+      sans-serif;
+  }
+  .toggle_btn {
+    display: block;
+    color: white;
     font-size: 20px;
   }
-  .newquote {
-    padding: 5px;
-  }
-  .author {
-    padding: 5px;
-    font-size: 1.2em;
-    margin-top: 5px;
-  }
-  .heading {
-    font-size: 10px;
+  .account {
+    display: none;
   }
 }
 
-@media (max-width: 600px) {
-  .icons {
-    justify-content: space-around;
-  }
-
-  .left,
-  .right {
-    font-size: 3rem;
-    padding: 10rem;
-  }
-  .quoteCategory {
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-  }
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-}
-
-/* next section */
-/* for reach out container */
 .help-article {
   background-color: #ffffff;
   padding: 50px 20px;
@@ -601,10 +516,17 @@ section .intro h1 {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   flex: 1;
   min-width: 250px;
   max-width: 30%;
+  transition: all ease-in-out 0.3s;
+}
+.card:hover {
+  background-color: #1b3d6d;
+  color: white;
+
+  transform: scale(1.1);
 }
 
 .card h3 {
@@ -617,6 +539,9 @@ section .intro h1 {
   font-size: 1rem;
   line-height: 1.5;
   color: #555;
+}
+.card p:hover {
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -658,12 +583,17 @@ section .intro h1 {
   flex: 1;
   padding: 20px;
   text-align: center;
+  
 }
 
 .image-column img {
   max-width: 100%;
   border-radius: 10px;
   object-fit: cover;
+  transition: all ease-in-out 0.3s;
+}
+.image-column img:hover {
+  transform: scale(1.1);
 }
 
 h2 {
@@ -860,6 +790,10 @@ button:hover {
   border-radius: 10px;
   object-fit: cover;
   filter: drop-shadow(10px 10px 30px #1d3557);
+  transition: all ease-in-out 0.3s;
+}
+.support-image img:hover{
+  transform: scale(1.1);
 }
 
 /* media query */
@@ -985,3 +919,4 @@ li {
     flex-direction: column;
   }
 }
+
