@@ -1064,28 +1064,31 @@ function randomquote() {
   void quote.offsetWidth; // Force reflow (optional, for some browsers)
   quote.classList.add('quoteAnimation'); // Readd animation class
 }
-
-// toggle
-
 newquote.addEventListener('click', randomquote);
 
 // toggle functionality
-
-toggleBtn = document.querySelector('.toggle_btn');
-dropdown = document.querySelector('.dropdown_menu ');
+// Correct the selectors
+const toggleBtn = document.querySelector('.toggle_btn');
+const dropdown = document.querySelector('.dropdown_menu');
 const breakpoint = 768;
 
+// Add click event listener to the toggle button
 toggleBtn.addEventListener('click', function () {
-  dropdown.classList.toggle('active');
+  dropdown.classList.toggle('active'); // Toggle the 'active' class on the dropdown
 });
 
+// Handle screen resizing
 function handleResize() {
   if (window.innerWidth >= breakpoint) {
     dropdown.classList.remove('active');
   }
 }
+
+// Call the handleResize function on window resize and load
 window.addEventListener('resize', handleResize);
 window.addEventListener('DOMContentLoaded', handleResize);
+
+
 
 // for relationship container
 

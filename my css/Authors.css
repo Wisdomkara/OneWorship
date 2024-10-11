@@ -191,3 +191,81 @@ span:hover {
     font-size: 10px;
   }
 }
+
+
+.footer {
+  background-color: #1d3557;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10em;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-info,
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-info h2,
+.footer-social h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social li {
+  display: inline;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f1faee; /* Light color on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.875rem;
+  border-top: 1px solid #ffffff;
+  padding-top: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-family: 'roboto', sans-serif;
+  font-size: 1rem;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  line-height: 2em;
+  font-weight: 700;
+}

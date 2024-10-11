@@ -91,7 +91,7 @@ a li:hover {
   padding: 10px;
   box-shadow: 0px 0px rgb(255, 255, 255), 0px 0px 10px rgb(65, 65, 65);
   max-width: 600rem;
-  z-index: 99999999999999999;
+  z-index: 99999999;
 }
 /* for log in and log out */
 .sign-up a {
@@ -110,6 +110,9 @@ a li:hover {
 .login {
   background-color: rgba(255, 0, 0, 0);
 }
+.drop_account{
+  display: block;
+}
 
 /* for social icon styling */
 .social a {
@@ -125,36 +128,47 @@ a li:hover {
   cursor: pointer;
 }
 
-/* drop down styling */
+/* Dropdown menu styling */
 .dropdown_menu {
-  overflow: auto;
+  overflow: hidden; /* Prevents content from overflowing when the height is set to 0 */
   position: absolute;
   top: 4.3rem;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.651);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.65
+  ); /* Slightly transparent background */
   width: 250px;
-  color: white;
-  text-decoration: none;
-  color: black;
   text-align: center;
   right: -1%;
-  height: 0px;
+  height: 0; /* Start with height 0 to hide content */
   border-radius: 5px;
-  z-index: 100000000000;
-}
-.dropdown_menu.active {
-  height: 300px;
-}
-.dropdown_menu a {
-  text-decoration: none;
-  color: black;
+  transition: height 0.3s ease-in-out; /* Smooth transition for height */
+  z-index: 100000000000; /* Ensure it is above other content */
 }
 
+/* When active, increase the height to show the dropdown */
+.dropdown_menu.active {
+  height: 400px; /* Adjust height for dropdown menu */
+}
+
+/* Styling for links inside the dropdown */
+.dropdown_menu a {
+  display: block; /* Make sure links take full width */
+  padding: 5px; /* Add some padding for better spacing */
+  text-decoration: none;
+  color: black; /* Make sure the color is black */
+  transition: background-color 0.3s ease-in; /* Smooth hover transition */
+}
+
+/* Hover effect for links */
 .dropdown_menu a:hover {
-  background-color: #1d3557;
-  color: white;
+  background-color: #1d3557; /* Background color change on hover */
+  color: white; /* Text color change on hover */
+  border-radius: 0px 80px 0px 50px; /* Apply border radius on hover */
   transition: all 0.3s ease-in;
-  border-radius: 0px 80px 0px 50px;
 }
 
 /* main content */
@@ -447,37 +461,6 @@ section .intro h1 {
   }
 }
 
-/* dropdown menu */
-
-/* media queries */
-
-/* for smaller i phone screen and andriod header dropdown button */
-
-@media only screen and (max-width: 600px) {
-  .toggle_btn {
-    display: block;
-  }
-  .list,
-  li,
-  a {
-    display: none;
-  }
-  .head {
-    font-size: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-      sans-serif;
-  }
-  .toggle_btn {
-    display: block;
-    color: white;
-    font-size: 20px;
-  }
-  .account {
-    display: none;
-  }
-}
-
 .help-article {
   background-color: #ffffff;
   padding: 50px 20px;
@@ -544,17 +527,6 @@ section .intro h1 {
   color: white;
 }
 
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    max-width: 100%;
-  }
-}
-
 /* for my form */
 
 .help-form-container {
@@ -583,7 +555,6 @@ section .intro h1 {
   flex: 1;
   padding: 20px;
   text-align: center;
-  
 }
 
 .image-column img {
@@ -651,37 +622,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
-  .help-form-container {
-    flex-direction: column;
-  }
-
-  .form-column,
-  .image-column {
-    width: 100%;
-    padding: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .help-form-container {
-    flex-direction: column; /* Stack elements vertically */
-    margin-top: 30rem; /* Adjust top margin for smaller screens */
-    padding: 10px;
-  }
-
-  .form-column,
-  .image-column {
-    width: 100%; /* Ensure full width for form and image */
-    margin-bottom: 20px;
-  }
-
-  .image-column img {
-    max-height: 300px; /* Adjust the image height for smaller screens */
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-}
 /* Apply Google Font */
 .support-container {
   background-image: url('empathy.jpg');
@@ -792,21 +732,8 @@ button:hover {
   filter: drop-shadow(10px 10px 30px #1d3557);
   transition: all ease-in-out 0.3s;
 }
-.support-image img:hover{
+.support-image img:hover {
   transform: scale(1.1);
-}
-
-/* media query */
-@media (max-width: 768px) {
-  .support-container {
-    flex-direction: column;
-  }
-
-  .support-content,
-  .support-image {
-    width: 100%;
-    padding: 10px;
-  }
 }
 
 /* Keyframes for animations */
@@ -912,11 +839,162 @@ li {
   font-weight: 700;
 }
 
+
+
 @media (max-width: 768px) {
   .form-image-container {
     margin-top: 40rem;
     display: flex;
     flex-direction: column;
   }
+   .show, li{
+    display: block;
+  }
+    
+  section .contains {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2em;
+    max-width: 70vw;
+  }
+  .help-form-container {
+    flex-direction: column;
+  }
+
+  .form-column,
+  .image-column {
+    width: 100%;
+    padding: 10px;
+  }
+  .help-form-container {
+    flex-direction: column; /* Stack elements vertically */
+    margin-top: 30rem; /* Adjust top margin for smaller screens */
+    padding: 10px;
+  }
+
+  .form-column,
+  .image-column {
+    width: 100%; /* Ensure full width for form and image */
+    margin-bottom: 20px;
+  }
+
+  .image-column img {
+    max-height: 300px; /* Adjust the image height for smaller screens */
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+  .support-container {
+    flex-direction: column;
+  }
+
+  .support-content,
+  .support-image {
+    width: 100%;
+    padding: 10px;
+  }
+  .toggle_btn {
+    display: block;
+  }
+  .list,
+  li,
+  a {
+    display: none;
+  }
+  .head {
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+      sans-serif;
+  }
+  .toggle_btn {
+    display: block;
+    color: white;
+    font-size: 20px;
+  }
+  .account {
+    display: block;
+  }
 }
 
+/* media queries */
+
+/* for smaller i phone screen and andriod header dropdown button */
+
+@media only screen and (max-width: 600px) {
+  .toggle_btn {
+    display: none;
+  }
+  .list,
+  li,
+  a {
+    display: none;
+  }
+  .show, li{
+    display: block;
+  }
+  .head {
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+      sans-serif;
+  }
+  .toggle_btn {
+    display: block;
+    color: white;
+    font-size: 20px;
+  }
+  .account {
+    display: none;
+  }
+}
+/* 
+@media (max-width:700px) {
+    .show, li{
+      display: block;
+    }
+}
+@media (max-width:1000px) {
+    .show, li{
+      display: block;
+    }
+
+} */
+ @media (min-width:600px) and (max-width:1024px){
+  .show, li{
+    display: block;
+  }
+  .toggle_btn{
+    display: block;
+    color: white;
+    font-size: 2rem;
+  
+  }
+  .list,
+  li,
+  a {
+    display: none;
+  }
+
+ }
+ @media (max-width: 800px) {
+  .show, li{
+    display: block;
+  }
+ }
+  @media (max-width: 900px) {
+  .show, li{
+    display: block;
+  }
+ }
