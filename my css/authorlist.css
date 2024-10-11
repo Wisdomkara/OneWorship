@@ -1,0 +1,49 @@
+    
+    
+    .quotelistcontainer {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .quotestyle {
+        font-family: "poppins", sans-serif;
+        font-size: 1.4rem;
+        padding: 1.5rem;
+        display: inline-block;
+        background-color: rgba(180, 180, 180, 0.158);
+        border-width: 100px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px grey;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .quotestyle:hover {
+        background-color: rgba(17, 17, 17, 0.733);
+        color: white;
+        box-shadow: 0px 0px 10px rgb(16, 32, 154), 0px 0px 10px grey;
+        transition: ease-in-out 0.3s;
+      }
+      .authorsname {
+        color: black;
+        font-family: "poppins" sans-serif;
+        font-weight: bold;
+      }
+      .authorsdescription {
+        font-size: 25px;
+        font-family: "poppins";
+        font-weight: bolder;
+      }
+      .authorsdescription{
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .header{
+        align-items: center;
+        text-align: center;
+      }
+      img{
+        border-radius: 10px;
+        
+      }.row a {
+  text-decoration: none;
+}
+
