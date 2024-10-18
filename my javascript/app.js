@@ -1088,8 +1088,6 @@ function handleResize() {
 window.addEventListener('resize', handleResize);
 window.addEventListener('DOMContentLoaded', handleResize);
 
-
-
 // for relationship container
 
 const quote2 = document.querySelector('.quote2');
@@ -1820,17 +1818,46 @@ function successFunction() {
 }
 newquote5.addEventListener('click', successFunction);
 
-
-   
-
-
-
-
-
 // for video hero speed
 window.addEventListener('load', function () {
   const video = document.getElementById('heroVideo');
   video.playbackRate = 0.8; // Set desired speed here, e.g., 0.5 for half speed
 });
 
-//  handling   kara initaitive form submisssion
+// for entance animation
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        // Generate a random transform effect to slide into the center
+        const randomEffect = getRandomEffect();
+        entry.target.style.transform = randomEffect; // Apply random transform
+        entry.target.classList.add('visible'); // Trigger fade in
+      } else {
+        entry.target.classList.remove('visible'); // Remove visible class when out of view
+        entry.target.style.transform = ''; // Reset transform
+      }
+    });
+  });
+
+  // Select all elements with the class 'content'
+  const contentElements = document.querySelectorAll('.content');
+
+  // Observe each content element
+  contentElements.forEach(function (content) {
+    observer.observe(content);
+  });
+
+  // Function to get a random effect for sliding to the center
+  function getRandomEffect() {
+    const effects = [
+      'translateX(-30px)', // Slide in from left
+      'translateX30px)', // Slide in from right
+      'translateY(-30px)', // Slide in from top
+      'translateY(30px)', // Slide in from bottom
+      'scale(1.1)'
+    ];
+    // Return a random effect
+    return effects[Math.floor(Math.random() * effects.length)];
+  }
+});
