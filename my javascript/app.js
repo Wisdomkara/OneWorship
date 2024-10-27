@@ -1865,3 +1865,17 @@ document.addEventListener('DOMContentLoaded', function () {
     return effects[Math.floor(Math.random() * effects.length)];
   }
 });
+
+window.addEventListener('load', () => {
+  document.querySelector('.middle').classList.add('loaded');
+});
+
+// script.js
+
+window.addEventListener('load', () => {
+  const spaceContainer = document.querySelector('.space'); 
+  spaceContainer.classList.add('visible');  
+});
+
+
+
