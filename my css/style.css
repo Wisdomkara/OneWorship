@@ -10,7 +10,7 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  font-family: 'poppins', sans-serif;
+  
 }
 .hero {
   position: relative;
@@ -51,7 +51,7 @@ html {
 
 
 /* nav settings */
-.navlist {
+.navlist{
   color: rgb(14, 13, 13);
   font-family: 'roboto', serif;
   text-transform: capitalize;
@@ -96,7 +96,7 @@ a li:hover {
   font-family: sans-serif;
   background-color: #0057b300;
 }
-.login a {
+.login a { 
   text-decoration: none;
   color: white;
   font-family: sans-serif;
@@ -147,7 +147,7 @@ a li:hover {
 
 /* When active, increase the height to show the dropdown */
 .dropdown_menu.active {
-  height: 400px; /* Adjust height for dropdown menu */
+ height: 110vh; /* Adjust height for dropdown menu */
 }
 
 /* Styling for links inside the dropdown */
@@ -474,7 +474,7 @@ section .intro h1 {
 }
 
 .help-article {
-  background-color: #ffffff;
+  background-color: #0056b3;
   padding: 50px 20px;
   text-align: center;
   margin: 50px 0;
@@ -486,19 +486,21 @@ section .intro h1 {
   max-width: 1200px;
   margin: 0 auto;
   transition: 0;
+  background-color: #0056b3;
+  filter: drop-shadow(10px 10px 20px rgb(7, 110, 255));
 }
 
 .help-article h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #4a4a4a;
+  color: #ffffff;
 }
 
 .help-article p {
   font-size: 1.1rem;
   margin-bottom: 40px;
   line-height: 1.6;
-  color: #666;
+  color: #fffdfd;
 }
 
 .cards {
@@ -529,6 +531,9 @@ section .intro h1 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #333;
+}
+.card h3:hover{
+  color: whitesmoke;
 }
 
 .card p {
@@ -943,6 +948,37 @@ li {
 /* media queries */
 
 /* for smaller i phone screen and andriod header dropdown button */
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .show,
+  li {
+    display: block;
+  }
+  .toggle_btn {
+    display: block;
+    color: white;
+    font-size: 2rem;
+  }
+  .list,
+  li,
+  a {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .show,
+  li {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .show,
+  li {
+    display: block;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .toggle_btn {

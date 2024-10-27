@@ -12,6 +12,19 @@
   color: rgb(7, 110, 255);
   transition: all ease-in-out 0.4s;
 }
+button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
 
 
 /* nav settings */
@@ -111,7 +124,7 @@ a li:hover {
 
 /* When active, increase the height to show the dropdown */
 .dropdown_menu.active {
-  height: 400px; /* Adjust height for dropdown menu */
+  height: 110vh; /* Adjust height for dropdown menu */
 }
 
 /* Styling for links inside the dropdown */

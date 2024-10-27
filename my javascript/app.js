@@ -1028,6 +1028,11 @@ quote: the only way to escape the corruptible effect of praise is to go on worki
     author: 'Plato',
     quote: 'Knowledge is the beginning of happiness. - (Proverbs 3:13, ESV)',
   },
+  {
+    id: 178,
+    author: 'Confucus',
+    quote: 'When anger rises, think of the consequences. - (Ecclesiastes 7:9, KJV)',
+  },
 ];
 const heroImage = document.querySelectorAll('.hero');
 
@@ -1067,7 +1072,6 @@ function randomquote() {
 newquote.addEventListener('click', randomquote);
 
 // toggle functionality
-// Correct the selectors
 const toggleBtn = document.querySelector('.toggle_btn');
 const dropdown = document.querySelector('.dropdown_menu');
 const breakpoint = 768;
@@ -1855,7 +1859,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'translateX30px)', // Slide in from right
       'translateY(-30px)', // Slide in from top
       'translateY(30px)', // Slide in from bottom
-      'scale(1.1)'
+      'scale(1.1)',
     ];
     // Return a random effect
     return effects[Math.floor(Math.random() * effects.length)];

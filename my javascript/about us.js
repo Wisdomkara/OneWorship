@@ -1,47 +1,41 @@
-const display = document.getElementById('form');
+// for handling the toggle button
 
-display.addEventListener('submit', function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-  const pop = document.createElement('h1');
-  pop.textContent = 'thanks!!! you will receive a newsletter soon';
-  display.appendChild(pop);
-  pop.classList.add('formstyle');
-});
-
-// Select the toggle button and dropdown menu
 const toggleBtn = document.querySelector('.toggle_btn');
-const dropdown = document.querySelector('.dropdown_menu'); // Remove extra space
-
-// Define breakpoint
+const dropdown = document.querySelector('.dropdown_menu');
 const breakpoint = 768;
 
-// Toggle dropdown menu visibility on button click
+// Add click event listener to the toggle button
 toggleBtn.addEventListener('click', function () {
-  if (dropdown.classList.contains('active')) {
-    dropdown.classList.remove('active');
-  } else {
-    dropdown.classList.add('active');
-  }
+  dropdown.classList.toggle('active'); // Toggle the 'active' class on the dropdown
 });
 
-// Handle window resize to remove 'active' class when above breakpoint
+// Handle screen resizing
 function handleResize() {
   if (window.innerWidth >= breakpoint) {
     dropdown.classList.remove('active');
   }
 }
-
-// Add event listeners for resize and DOMContentLoaded
 window.addEventListener('resize', handleResize);
 window.addEventListener('DOMContentLoaded', handleResize);
 
+// script.js
 
- const navLinks = document.querySelectorAll('.navlist a, .dropdown_menu a');
+// Function to handle scroll event
+const animatedElements = document.querySelectorAll('.animated');
 
- // Loop through the links to find the one that matches the current URL
- navLinks.forEach((link) => {
-   if (link.href === window.location.href) {
-     link.classList.add('active');
-   }
- });
+function checkVisibility() {
+    const windowHeight = window.innerHeight;
+    animatedElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        // Check if the element is in the viewport
+        if (elementTop < windowHeight - 100) { // Trigger when it's about 100px from the bottom of the viewport
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Add event listener for scroll and load
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility); // Check visibility on page load
+
