@@ -177,7 +177,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.363);
+  background-color: #010a137a;
   background-size: contain;
   height: 98vh;
 }
@@ -382,6 +382,7 @@ main {
   
 .btnn {
   margin-top: 5em; 
+
 }
 
 
@@ -400,19 +401,10 @@ main {
   gap: 20px; 
   align-items: center;
   justify-content: center;
+
 }
 
   
-
-
-
-
-
-
-
-
-
-
 
 /* section */
 .quoteCategory {
@@ -1122,5 +1114,9 @@ li {
   .show,
   li {
     display: block;
+  }
+  .btnn.space{
+    display: block;
+    margin: 0;
   }
 }
