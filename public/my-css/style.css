@@ -492,7 +492,6 @@ section .intro h1 {
 }
 .growth {
   background-image: url('/public/images/investment-5241253_1280.jpg');
-;
 }
 
 /* names category */
@@ -818,8 +817,8 @@ button:hover {
     transform: scale(1);
   }
 }
-.booking-container{
-  display:flex;
+.booking-container {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
@@ -828,11 +827,10 @@ button:hover {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 2s ease-in-out; 
-
+  animation: fadeIn 2s ease-in-out;
 }
-.booking-content{
-   flex: 1;
+.booking-content {
+  flex: 1;
   padding: 20px;
 }
 
