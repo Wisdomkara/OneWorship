@@ -681,7 +681,7 @@ button:hover {
 
 /* Apply Google Font */
 .support-container {
-  background-image: url('empathy.jpg');
+  background-image: url('images/empathy.jpg');
 
   display: flex;
   justify-content: space-between;
