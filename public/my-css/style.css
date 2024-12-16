@@ -467,31 +467,31 @@ section .intro h1 {
   z-index: 1;
 }
 .relationship {
-  background-image: url('/public/images/couple-8019370_1280.jpg');
+  background-image: url('images/couple-8019370_1280.jpg');
 }
 /* for mindset */
 .mindset {
-  background-image: url('/public/images/ai-generated-8684971_1280.jpg');
+  background-image: url('images/ai-generated-8684971_1280.jpg');
 }
 .creativity {
-  background-image: url('/public/images/light-bulb-4514505_1280.jpg');
+  background-image: url('images/light-bulb-4514505_1280.jpg');
 }
 .success {
-  background-image: url('/public/images/success.jpg');
+  background-image: url('images/success.jpg');
 }
 .wisdom {
-  background: url('/public/images/wisdp.jpg');
+  background: url('images/wisdp.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .encouragement {
-  background-image: url('/public/images/pexels-kamaji-ogino-5064673\ \(1\).jpg');
+  background-image: url('pexels-kamaji-ogino-5064673\ \(1\).jpg');
 }
 .family {
-  background-image: url('/public/images/pexels-august-de-richelieu-4259140\ \(1\).jpg');
+  background-image: url('images/pexels-august-de-richelieu-4259140\ \(1\).jpg');
 }
 .growth {
-  background-image: url('/public/images/investment-5241253_1280.jpg');
+  background-image: url('images/investment-5241253_1280.jpg');
 }
 
 /* names category */
