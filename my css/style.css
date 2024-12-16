@@ -10,7 +10,6 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  
 }
 .hero {
   position: relative;
@@ -49,9 +48,8 @@ html {
   transition: all ease-in-out 0.4s;
 }
 
-
 /* nav settings */
-.navlist{
+.navlist {
   color: rgb(14, 13, 13);
   font-family: 'roboto', serif;
   text-transform: capitalize;
@@ -96,7 +94,7 @@ a li:hover {
   font-family: sans-serif;
   background-color: #0057b300;
 }
-.login a { 
+.login a {
   text-decoration: none;
   color: white;
   font-family: sans-serif;
@@ -147,7 +145,7 @@ a li:hover {
 
 /* When active, increase the height to show the dropdown */
 .dropdown_menu.active {
- height: 110vh; /* Adjust height for dropdown menu */
+  height: 110vh; /* Adjust height for dropdown menu */
 }
 
 /* Styling for links inside the dropdown */
@@ -173,6 +171,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.363);
+  background-size: contain;
+  height: 98vh;
 }
 
 .container {
@@ -195,19 +196,14 @@ main {
 /* for sliding in of my help container */
 /* Base styles */
 .content {
-    opacity: 0; /* Start as invisible */
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Transition effect */
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Transition effect */
 }
 
 /* Animation for becoming visible */
 .visible {
-    opacity: 1; /* Make visible */
+  opacity: 1; /* Make visible */
 }
-
-
-
-
-
 
 @keyframes slide {
   0% {
@@ -342,6 +338,49 @@ main {
   position: relative;
 }
 
+/* for book section linking */
+.unlock {
+  font-family: 'Playwrite GB S', cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.middle {
+  text-align: center;
+  padding: 3em;
+  margin-top: 5em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.middle.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btnn {
+  margin-top: 5em;
+}
+
+.space {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 1s ease-in-out;
+}
+
+.space.visible {
+  opacity: 1;
+  transform: translateY(0);
+  margin-left: 10em;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
 /* section */
 .quoteCategory {
   display: flex;
@@ -532,7 +571,7 @@ section .intro h1 {
   margin-bottom: 15px;
   color: #333;
 }
-.card h3:hover{
+.card h3:hover {
   color: whitesmoke;
 }
 
@@ -778,6 +817,23 @@ button:hover {
     transform: scale(1);
   }
 }
+.booking-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out; 
+
+}
+.booking-content{
+   flex: 1;
+  padding: 20px;
+}
 
 /* for footer */
 /* Apply Google Font */
@@ -948,8 +1004,6 @@ li {
 /* media queries */
 
 /* for smaller i phone screen and andriod header dropdown button */
-
-
 
 @media (min-width: 600px) and (max-width: 1024px) {
   .show,
