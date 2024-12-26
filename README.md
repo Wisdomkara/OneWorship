@@ -1,2 +1,3 @@
-# oneworship
- This app will inspire you and link you to people that actually care
+# OneWorship
+this app will inspire you everyday  serve as a platform for anyone going through any sort of emotional issues
+ 
