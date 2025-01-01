@@ -1867,3 +1867,5 @@ document.addEventListener('DOMContentLoaded', function () {
     return effects[Math.floor(Math.random() * effects.length)];
   }
 });
+
+
