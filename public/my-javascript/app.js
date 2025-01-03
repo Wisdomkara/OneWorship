@@ -1033,7 +1033,8 @@ quote: the only way to escape the corruptible effect of praise is to go on worki
   {
     id: 178,
     author: 'Confucus',
-    quote: 'When anger rises, think of the consequences. - (Ecclesiastes 7:9, KJV)',
+    quote:
+      'When anger rises, think of the consequences. - (Ecclesiastes 7:9, KJV)',
   },
 ];
 const heroImage = document.querySelectorAll('.hero');
@@ -1826,9 +1827,19 @@ newquote5.addEventListener('click', successFunction);
 
 // for video hero speed
 window.addEventListener('load', function () {
+  console.log('Page loaded');
   const video = document.getElementById('heroVideo');
-  video.playbackRate = 0.8; // Set desired speed here, e.g., 0.5 for half speed
+  if (video) {
+    console.log('Video element found');
+    video.playbackRate = 0.8; // Adjust playback speed
+  } else {
+    console.log('Video element not found');
+  }
 });
+
+video.muted = true; // Ensure it's muted
+video.play().catch((error) => console.error('Autoplay failed:', error));
+
 
 // for entance animation
 document.addEventListener('DOMContentLoaded', function () {
@@ -1867,5 +1878,3 @@ document.addEventListener('DOMContentLoaded', function () {
     return effects[Math.floor(Math.random() * effects.length)];
   }
 });
-
-

@@ -17,7 +17,7 @@ html {
   overflow: hidden;
   width: 100vw;
 }
-#heroVideo {
+#heroVideo{
   position: absolute;
   top: 50%;
   left: 50%;
