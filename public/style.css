@@ -17,7 +17,7 @@ html {
   overflow: hidden;
   width: 100vw;
 }
-#heroVideo{
+#heroVideo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -189,8 +189,9 @@ main {
   text-align: center;
   animation: slide;
   animation-duration: 7s;
-  animation-iteration-count: infinite;
+
   -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   z-index: 9999;
 }
 /* for sliding in of my help container */
@@ -228,8 +229,8 @@ main {
   text-align: center;
   animation: slide;
   animation-duration: 7s;
-  animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   position: absolute;
   margin-left: 5%;
 }
@@ -255,8 +256,8 @@ main {
   text-align: center;
   animation: slide;
   animation-duration: 7s;
-  animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   position: absolute;
   margin-right: 5%;
 }
@@ -449,8 +450,8 @@ section .intro h1 {
   text-align: center;
   animation: slide;
   animation-duration: 7s;
-  animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   position: relative;
   margin-top: 2rem;
   margin-right: 1rem;
