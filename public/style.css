@@ -529,6 +529,9 @@ section .intro h1 {
   background-color: #0056b3;
   filter: drop-shadow(10px 10px 20px rgb(7, 110, 255));
 }
+.help-form-container content{
+  margin-top: 35rem
+}
 
 .help-article h2 {
   font-size: 2.5rem;
@@ -623,6 +626,9 @@ section .intro h1 {
 }
 .image-column img:hover {
   transform: scale(1.1);
+}
+.image-column, .content{
+  height: 40rem
 }
 
 h2 {

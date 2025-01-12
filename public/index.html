@@ -259,7 +259,7 @@
       </div>
     </article>
     <!-- help form -->
-    <div class="help-form-container content" style="margin-top: 35rem">
+    <div class="help-form-container content">
       <div class="form-image-container">
         <div class="form-column">
           <h2>Get Professional Help</h2>
@@ -309,9 +309,9 @@
 
         <div class="image-column content">
           <img
-            src="/images/pexels-lucanardone-3651632.jpg"
+               src="/images/pexels-lucanardone-3651632.jpg"
             alt="Get Help Image"
-            style="height: 40rem" />
+             />
         </div>
       </div>
     </div>
@@ -376,7 +376,7 @@
           <h2>Follow Us</h2>
           <ul>
             <li>
-              <a
+              <a   rel="noopener"
                 href="https://web.facebook.com/?_rdc=1&_rdr"
                 target="_blank"
                 aria-label="Facebook"
@@ -384,7 +384,7 @@
               ></a>
             </li>
             <li>
-              <a
+              <a  rel="noopener"
                 href="https://instagram.com/yourprofile"
                 target="_blank"
                 aria-label="Instagram"
@@ -392,7 +392,7 @@
               ></a>
             </li>
             <li>
-              <a
+              <a rel="noopener"
                 href="https://twitter.com/yourprofile"
                 target="_blank"
                 aria-label="Twitter"
@@ -402,10 +402,12 @@
           </ul>
         </div>
         <div class="footer-links">
-          <li><a href="index.html">Home</a></li>
+         <ul>
+           <li><a href="index.html">Home</a></li>
           <li><a href="Authors.html">Author</a></li>
           <li><a href="about us.html">About Us</a></li>
           <li><a href="quote.html">Quotes</a></li>
+         </ul>
         </div>
       </div>
 
@@ -414,7 +416,7 @@
       </div>
     </footer>
     <!-- for my firbase -->
-     <script src="my-javascript/app.js"></script>
+  
     <script type="module">
       // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -438,6 +440,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
     </script>
-    
+     <script src="/public/my-javascript/app.js"></script>
   </body>
 </html>
