@@ -1829,17 +1829,28 @@ newquote5.addEventListener('click', successFunction);
 // for video hero speed
 window.addEventListener('load', function () {
   console.log('Page loaded');
+
   const video = document.getElementById('heroVideo');
+
   if (video) {
     console.log('Video element found');
-    video.playbackRate = 0.8; // Adjust playback speed
+    video.muted = true;
+    video.playbackRate = 0.8;
+    video
+      .play()
+      .then(() => {
+        console.log('Video is playing');
+      })
+      .catch((error) => {
+        console.error('Autoplay failed:', error);
+      });
   } else {
     console.log('Video element not found');
   }
 });
 
-video.muted = true; // Ensure it's muted
-video.play().catch((error) => console.error('Autoplay failed:', error));
+  
+
 
 
 // for entance animation
